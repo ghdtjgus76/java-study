@@ -17,7 +17,8 @@ public class ShoppingCart {
     public void displayItems() {
         System.out.println("장바구니 상품 출력");
 
-        for (Item item : items) {
+        for (int i = 0; i < itemCount; i++) {
+            Item item = items[i];
             System.out.println("상품명:" + item.getName() + ", 합계:" + item.getTotalPrice());
         }
 
@@ -27,7 +28,8 @@ public class ShoppingCart {
     private int calculateTotalPrice() {
         int totalPrice = 0;
 
-        for (Item item : items) {
+        for (int i = 0; i < itemCount; i++) {
+            Item item = items[i];
             totalPrice += item.getTotalPrice();
         }
 
